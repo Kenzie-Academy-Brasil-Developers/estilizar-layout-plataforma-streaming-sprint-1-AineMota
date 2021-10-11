@@ -13,26 +13,124 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** RODAPÉ
 **** PÁGINA INICIAL
 */
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+	box-sizing: border-box;
+}
 
 /* VARIÁVEIS */
 :root{
-  
+  --color: #fff;
+  --background: #00002E;
 }
 
 /*BODY*/
 	body{
-
+		background-color: var(--background);
+		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	}
+	figcaption{
+		display: none;
 	}
 
 /*TOPO*/
 	header.topo{
-		
+		margin-right: auto;
 	}
+
 
 /*RODAPÉ*/
 	
 
 /*PÁGINA INICIAL*/
+	header h2{
+		font-size: 1.8rem;
+		margin:0 auto 30px auto;
+		font-weight: 800;
+		color: var(--color);
+	}
 	div.pg-home{
-		
+		width: 100%;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	div.pg-home ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		margin-bottom: 65px;
+	}
+	.pg-home ul li {
+		width: 186px ;
+		cursor: pointer; 
+		margin: 0 10px;
+	}	
+	.user{
+		width:100%;
+		margin: 10px 0 ;
+	}
+	.user:hover{
+		border: 2px solid var(--color);
+	}
+	h3{
+		color: var(--color);
+		margin-top: 10px;
+		font-size: 1.3rem;
+	}
+	.addPerfil img {
+		width: 130px;
+		margin: 30px 0 50px 0 ;
+	}
+	button{
+		background-color: var(--background);
+		color: var(--color);
+		font-size: 1.2rem ;
+		padding: 15px;
+		width: 180px;
+		cursor: pointer;
+		border: solid var(--color) 2px;
+		border-radius: 5px ;
+		margin: 0 auto 15px auto;
+	}
+
+	@media only screen and (min-width: 400px){
+
+	div.pg-home ul{
+		width: 858px;
+	}
+	header h2{
+		font-size: 3rem;
+	}
+	}
+	@media only screen and (max-width: 700px){
+		div.pg-home ul{
+			max-width: 500px;
+		}
+		header.topo{
+			text-align: center;
+		}	
 	}
