@@ -46,6 +46,8 @@ time, mark, audio, video {
 	body{
 		background-color: var(--background);
 		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+		height: 100vh;
+		width: 100vw;
 	}
 	figcaption{
 		display: none;
